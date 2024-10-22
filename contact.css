@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  background-color: #f5f5dc; /* Light beige background */
+  color: #333; /* Dark text */
+  line-height: 1.5;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.content {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.form-area {
+  max-width: 600px; /* Limit form width */
+  width: 100%; /* Full width */
+}
+
+h2 {
+  font-size: 2em; /* Larger font size for header */
+  margin-bottom: 20px; /* Spacing below header */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Space between form elements */
+}
+
+label {
+  display: block; /* Block display for labels */
+  font-weight: bold; /* Bold labels */
+  margin-bottom: 5px; /* Space below labels */
+}
+
+input[type="email"],
+input[type="text"],
+textarea {
+  width: 100%; /* Full width inputs */
+  padding: 10px; /* Padding inside inputs */
+  border: 1px solid #ccc; /* Light grey border */
+  border-radius: 4px; /* Rounded borders */
+  font-size: 1em; /* Standard font size */
+}
+
+textarea {
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.submit-button {
+  background-color: #333; /* Dark background for button */
+  color: white; /* White text for button */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding for button */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1.2em; /* Larger font size for button */
+  margin-top: 10px; /* Space above button */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.submit-button:hover {
+  background-color: #555; /* Darker background on hover */
+}
+
+.contact-info {
+  margin-top: 20px; /* Space above contact info */
+}
+
+.contact-info a {
+  color: #333; /* Dark link color */
+  text-decoration: none; /* No underline */
+}
+
+.contact-info a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+header {
+  display: flex; /* Flexbox for header */
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center; /* Center vertically */
+  padding: 10px; /* Padding around header */
+  height: 88px; /* Fixed height for header */
+  width: 100%; /* Full width */
+  background-color: transparent; /* Transparent background */
+}
+
+.dropdown {
+  position: relative; /* For absolute positioning of dropdown content */
+}
+
+.logo {
+  height: 66px; /* Logo height */
+  width: auto; /* Auto width to maintain aspect ratio */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.dropdown-content {
+  display: none; /* Hidden by default */
+  position: absolute; /* Position it absolutely */
+  background-color: rgba(224, 224, 224, 0.9); /* Semi-transparent background */
+  min-width: 160px; /* Minimum width of dropdown */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for dropdown */
+  z-index: 1; /* Ensure it appears on top */
+  margin-top: 5px; /* Space below the dropdown */
+}
+
+.dropdown-content a {
+  color: #333; /* Dark link color */
+  padding: 10px; /* Padding inside the dropdown items */
+  text-decoration: none; /* No underline */
+  display: block; /* Block display for links */
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd; /* Background on hover */
+}
+
+.show {
+  display: block; /* Show dropdown */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column; /* Stack content vertically */
+  }
+
+  .content {
+    width: 100%; /* Full width for content */
+    justify-content: center; /* Center content */
+    align-items: center; /* Center content */
+  }
+
+  .form-area {
+    max-width: 100%; /* Full width for form area */
+    padding: 10px; /* Padding inside form area */
+  }
+}
+.contact-info a {
+  color: #333; /* Dark link color */
+  text-decoration: none; /* No underline */
+  margin-right: 10px; /* Space between icons */
+  font-size: 1.5em; /* Icon size */
+}
+
+.contact-info a:hover {
+  color: #555; /* Change color on hover */
+}
+

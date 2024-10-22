@@ -1,0 +1,221 @@
+/* General Body Styles */
+body {
+  font-family: Verdana, sans-serif;
+  color: white;
+  margin: 0;
+  height: 100vh;
+  position: relative;
+  transition: background-color 0.5s; /* Smooth transition for background color */
+}
+
+/* Container Styles */
+.container {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+.header {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.logo {
+  width: 80px; /* Increased size of the logo for better visibility on laptops */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(224, 224, 224, 0.1); /* Semi-transparent to adapt to background */
+  min-width: 160px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-top: 5px; /* Add space below the logo */
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Artwork Container Styles */
+.artwork-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.artwork {
+  flex: 1;
+  max-width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.artwork img {
+  max-width: 100%;
+  max-height: 70vh;
+  height: auto;
+  width: auto;
+}
+
+/* Artwork Information Styles */
+/* Artwork Information Styles */
+#plaque {
+  margin: 20px 0 80px; /* Ensure there's enough bottom margin */
+  text-align: center;
+  text-transform: uppercase; /* Force uppercase text */
+  font-family: Verdana, sans-serif; /* Set font to Verdana */
+  text-align: center;
+  padding: 10px;
+}
+
+#plaque h2 {
+  margin: 0;
+  font-size: 1.5em; /* Adjust font size as needed */
+  color: white;
+  text-shadow: 2px 2px 4px black; /* Apply a more visible text shadow */
+  text-transform: uppercase; /* Ensure title is uppercase */
+}
+
+#plaque p {
+  margin: 10px 0 0;
+  font-size: 1em; /* Adjust font size as needed */
+  color: white;
+  text-shadow: 2px 2px 4px black; /* Apply text shadow to the description */
+  text-transform: uppercase; /* Ensure description is also in uppercase */
+}
+
+
+
+
+/* Navigation Button Styles */
+.nav-button {
+  background-color: rgba(85, 85, 85, 0); /* Semi-transparent background */
+  color: white; /* Button text color */
+  text-shadow: 2px 2px 2px black; /* Apply text-shadow to the button */
+  border: none; /* Remove border */
+  padding: 8px 12px; /* Adjust button padding */
+  cursor: pointer; /* Change cursor */
+  font-size: 1.5em; /* Set font size for buttons */
+  margin: 0 5px; /* Space between buttons */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+  display: inline-flex; /* Ensure proper alignment of text and shadow */
+  align-items: center; /* Align text vertically */
+  justify-content: center; /* Center text */
+}
+
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Darken on hover for visibility */
+}
+
+/* Contact Button Styles */
+.contact-button-container {
+  position: absolute; /* Absolute positioning */
+  bottom: 20px; /* Distance from the bottom */
+  left: 20px; /* Distance from the left */
+  z-index: 2; /* Ensure it's on top */
+}
+
+.contact-info {
+  background-color: rgba(255, 255, 255, 0); /* Transparent background */
+  color: white; /* Text color */
+  text-shadow: 2px 2px 2px black; /* Ensure text-shadow for the contact button */
+  border: none; /* Remove border */
+  cursor: pointer; /* Change cursor */
+  font-size: 2em; /* Set a large font size for the icon */
+  padding: 10px; /* Add padding for clickable area */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.contact-info:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly darken on hover */
+}
+
+/* Sold Indicator Styles */
+.sold-indicator {
+  display: none; /* Initially hidden */
+  width: 100px; /* Size of the red circle */
+  height: 100px; /* Size of the red circle */
+  background-color: red; /* Color of the circle */
+  border-radius: 50%; /* Make it a circle */
+  margin: 0 auto; /* Center the circle */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .artwork {
+    max-width: 90%; /* Adjust max width for smaller screens */
+  }
+
+  .artwork-info h2 {
+    font-size: 1.2em; /* Increase font size for better readability */
+    text-shadow: 2px 2px 2px black; /* Retain text-shadow */
+  }
+
+  .artwork-info p {
+    font-size: 0.85em; /* Increase font size for better readability */
+    text-shadow: 2px 2px 2px black; /* Retain text-shadow */
+  }
+
+  .nav-button {
+    font-size: 1.2em; /* Adjust font size for buttons */
+  }
+
+  .contact-info {
+    font-size: 1.8em; /* Slightly smaller icon size for tablets */
+  }
+
+  .logo {
+    width: 50px; /* Smaller logo for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    font-size: 0.8em; /* Reduce header size for very small screens */
+  }
+
+  .nav-button {
+    padding: 5px 10px; /* Adjust button padding */
+    font-size: 1em; /* Reduce font size for buttons */
+  }
+
+  .contact-info {
+    font-size: 1.5em; /* Even smaller icon size for phones */
+    padding: 8px; /* Adjust padding for phones */
+  }
+
+  .sold-indicator {
+    width: 80px; /* Adjust size for smaller screens */
+    height: 80px; /* Adjust size for smaller screens */
+  }
+}

@@ -1,0 +1,254 @@
+/* Reset Default Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure consistent box-sizing */
+}
+
+/* Body Styles */
+body {
+  font-family: Verdana, sans-serif; /* Font for the body */
+  background-color: #f5f5dc; /* Light beige background */
+  color: #333; /* Dark text color */
+  line-height: 1.5; /* Line height for readability */
+}
+
+/* Container Styles */
+.container {
+  display: flex; /* Flexbox for main layout */
+  height: calc(100vh - 100px); /* Full height minus header */
+}
+
+/* Sidebar Styles */
+.sidebar {
+  padding: 20px; /* Padding inside sidebar */
+  width: 14%; /* Adjusted sidebar width for better fit */
+}
+
+.sidebar ul {
+  list-style-type: none; /* No bullet points for the list */
+}
+
+.sidebar ul li {
+  margin: 15px 0; /* Space between list items */
+  font-size: 1.5em; /* Font size for sidebar items */
+  font-weight: bold; /* Bold text */
+}
+
+.sidebar ul .subtext {
+  font-size: 1em; /* Subtext size */
+}
+
+/* Content Styles */
+.content {
+  display: flex; /* Allow content to be side-by-side */
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center; /* Center align items */
+  padding: 20px; /* Padding around content */
+  width: 86%; /* Content takes up remaining width */
+}
+
+/* Image Area Styles */
+.image-area {
+  text-align: center; /* Center align text */
+  display: flex; /* Flexbox for image and buttons */
+  flex-direction: column; /* Stack image and buttons vertically */
+  align-items: center; /* Center align */
+}
+
+.image-area img {
+  width: auto; /* Keep original size */
+  max-width: 80%; /* Adjust max width for better fitting */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the area */
+  border: 5px solid #fff; /* White border around image */
+}
+
+/* Button Area Styles */
+.button-area {
+  margin-top: 10px; /* Space above the buttons */
+}
+
+.nav-button {
+  background-color: rgba(85, 85, 85, 0); /* Semi-transparent background */
+  border: none; /* Remove border */
+  padding: 10px 15px; /* Button padding */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1.5em; /* Button text size */
+  margin: 10px; /* Space around buttons */
+  transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Darken on hover */
+}
+
+/* Intro Text Styles */
+.intro {
+  background-color: transparent; /* No background color */
+  color: #333; /* Dark text color */
+  padding: 15px; /* Padding inside the intro box */
+  margin-top: 20px; /* Space above intro text */
+  width: 100%; /* Full width */
+  max-width: 800px; /* Increased max width for stretching */
+  text-align: left; /* Center align text */
+}
+
+/* Link Styles */
+a {
+  text-decoration: none; /* No underline for links */
+  color: inherit; /* Inherit text color */
+}
+
+/* Header Styles */
+header {
+  display: flex; /* Use flexbox for header layout */
+  justify-content: flex-start; /* Align logo to the left */
+  align-items: center; /* Vertically center the logo */
+  padding: 10px; /* Maintain padding */
+  height: 100px; /* Header height */
+  width: 100%; /* Full width */
+  background-color: transparent; /* No background color */
+}
+
+header img {
+  height: 80px; /* Increased logo height */
+  width: auto; /* Maintain aspect ratio */
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative; /* For absolute positioning of dropdown content */
+}
+
+.dropdown-content {
+  display: none; /* Hidden by default */
+  position: absolute; /* Position it absolutely */
+  background-color: rgba(224, 224, 224, 0.9); /* Semi-transparent background */
+  min-width: 160px; /* Minimum width of dropdown */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for dropdown */
+  z-index: 1; /* Ensure it appears on top */
+  margin-top: 5px; /* Space below the dropdown */
+}
+
+.dropdown-content a {
+  color: #333; /* Dark link color */
+  padding: 10px; /* Padding inside the dropdown items */
+  text-decoration: none; /* No underline */
+  display: block; /* Block display for links */
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd; /* Background on hover */
+}
+
+.show {
+  display: block; /* Show dropdown */
+}
+
+/* Logo Styles */
+.logo {
+  height: 80px; /* Increased logo height */
+  width: auto; /* Auto width to maintain aspect ratio */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column; /* Stack sidebar and content vertically */
+  }
+
+  .sidebar {
+    width: 100%; /* Sidebar takes full width on smaller screens */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .image-area img {
+    max-width: 90%; /* Adjust image size for smaller screens */
+    margin-bottom: 10px; /* Space below image */
+  }
+
+  .intro {
+    max-width: 90%; /* Ensure intro text aligns with image */
+    margin-left: 0; /* Remove margin on smaller screens */
+    text-align: left; /* Center text on smaller screens */
+  }
+
+  .nav-button {
+    font-size: 1.5em; /* Adjust button font size */
+  }
+}
+
+/* Media Query for iPad Landscape Mode */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .container {
+    flex-direction: row; /* Keep sidebar and content side by side */
+  }
+
+  .sidebar {
+    width: 20%; /* Slightly increased sidebar width for landscape mode */
+  }
+
+  .content {
+    flex-direction: column; /* Ensure content stacks vertically */
+    width: 80%; /* Remaining width for content */
+  }
+
+  .image-area {
+    margin-bottom: 20px; /* Space below the image area */
+  }
+
+  .intro {
+    margin-top: 20px; /* Ensure space above intro text */
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-button {
+    font-size: 1.4em; /* Adjust button font size */
+    padding: 8px 12px; /* Adjust button padding */
+  }
+
+  .sidebar ul li {
+    font-size: 1.5em; /* Adjust font size in sidebar */
+  }
+
+  .sidebar {
+    padding: 10px; /* Adjust sidebar padding */
+  }
+
+  header {
+    height: 80px; /* Reduce header height for smaller screens */
+  }
+
+  header img {
+    height: 60px; /* Reduce logo size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-button {
+    font-size: 1.2em; /* Further reduce button font size */
+  }
+
+  .sidebar ul li {
+    font-size: 1.3em; /* Further adjust sidebar font size */
+  }
+
+  header {
+    height: 70px; /* Further reduce header height */
+  }
+
+  header img {
+    height: 50px; /* Further reduce logo size */
+  }
+
+  .image-area img {
+    max-width: 100%; /* Ensure the image takes full width on very small screens */
+  }
+
+  .intro {
+    text-align: left; /* Center intro text on small screens */
+  }
+}
