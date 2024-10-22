@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tafels - Ton's Schilderijen</title>
+  <link rel="icon" href="../img/logo.png">
+  <link rel="stylesheet" href="../css/galerij.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="dropdown">
+      <button class="dropbtn" onclick="toggleDropdown()">
+        <img src="../img/logowit.png" alt="Logo" class="logo">
+      </button>
+      <div class="dropdown-content" id="dropdownMenu">
+        <a href="../html/index.html">HOME</a>
+        <a href="../html/tafels.html">TAFELS</a>
+        <a href="../html/natuur.html">NATUUR</a>
+        <a href="../html/abstract.html">ABSTRACT</a>
+        <a href="../html/divers.html">DIVERS</a>
+        <a href="../html/contact.html">CONTACT</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="artwork-container">
+    <button class="nav-button" id="prev-button">←</button>
+    <div class="artwork" id="artwork">
+      <img src="placeholder" alt="Artwork" id="artwork-image">
+    </div>
+    <button class="nav-button" id="next-button">→</button>
+  </div>
+
+  <div class="plaque" id="plaque">
+    <h2>PLACEHOLDER</h2>
+    <p>PLACEHOLDER</p>
+  </div>
+
+  <div class="contact-button-container">
+    <a href="contact.html" class="contact-info" id="contact-button"><i class="fa-regular fa-envelope"></i></a>
+    <div id="sold-indicator" class="sold-indicator" title="Dit kunstwerk is helaas verkocht."></div>
+  </div>
+</div>
+
+<script src="../javascript/tafels.js"></script>
+</body>
+</html>

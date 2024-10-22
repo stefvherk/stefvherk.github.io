@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Ton's Schilderijen</title>
+  <link rel="icon" href="../img/logo.png">
+  <link rel="stylesheet" type="text/css" href="../css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+<header>
+  <div class="dropdown">
+    <img src="../img/logo.png" alt="Logo" class="logo" onclick="toggleDropdown()">
+    <div class="dropdown-content" id="dropdownMenu">
+      <a href="../html/index.html">HOME</a>
+      <a href="../html/tafels.html">TAFELS</a>
+      <a href="../html/natuur.html">NATUUR</a>
+      <a href="../html/abstract.html">ABSTRACT</a>
+      <a href="../html/divers.html">DIVERS</a>
+      <a href="../html/contact.html">CONTACT</a>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <div class="sidebar">
+    <ul>
+      <li><a href="../html/tafels.html">TAFELS</a></li>
+      <li><a href="../html/natuur.html">NATUUR</a></li>
+      <li><a href="../html/abstract.html">ABSTRACT</a></li>
+      <li><a href="../html/divers.html">DIVERS</a></li>
+      <li><a href="../html/contact.html">CONTACT</a></li>
+      <li class="subtext">Prijzen op aanvraag</li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="image-area">
+      <img id="main-image" src="../img/sfeerbeelden/Atelier_10164.jpg" alt="Ton Stas relaxing" />
+      <div class="button-area">
+        <button id="back-btn" class="nav-button" onclick="changeImage(-1)" disabled>&lt;</button>
+        <button id="forward-btn" class="nav-button" onclick="changeImage(1)">&gt;</button>
+      </div>
+    </div>
+    <div class="intro">
+      <h2>LAAT IK ME EVEN VOORSTELLEN</h2>
+      <p>
+        Mijn naam is Ton Stas. Ik ben geboren in Geldrop, 6 mei 1942. Tekenen heb ik altijd graag gedaan.
+        Na drie jaar HBS ben ik naar de toenmalige academie voor Industriële Vormgeving in Eindhoven gegaan.
+        Na mijn diensttijd en drie jaar gewerkt te hebben bij het Philips licht adviesbureau ben ik
+        een reclame studio begonnen. <a href="https://stas-co.nl/" style="color: inherit; text-decoration: none;"><strong>Stas Communicatie</strong></a> bestaat nu na ruim 50 jaar nog steeds.
+      </p>
+      <p>
+        Tijdens mijn werkzame leven had ik niet de mogelijkheid om te schilderen. Ik prijs me
+        gelukkig dat ik die nu wel heb.
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const images = [
+    '../img/sfeerbeelden/Atelier_10164.jpg',
+    '../img/sfeerbeelden/Eetkamer_10041.jpg',
+    '../img/sfeerbeelden/keuken oirschot 2018-27.jpg',
+    '../img/sfeerbeelden/keuken oirschot 2018-28.jpg',
+    '../img/sfeerbeelden/Zitje met beoordelingsgesprek_10036.jpg',
+    '../img/sfeerbeelden/bolbloemen keuken.jpg',
+    '../img/sfeerbeelden/bomen woonkamer.jpg'
+  ];
+  let currentIndex = 0;
+
+  function changeImage(direction) {
+    currentIndex += direction;
+    document.getElementById('main-image').src = images[currentIndex];
+    document.getElementById('back-btn').disabled = currentIndex === 0;
+    document.getElementById('forward-btn').disabled = currentIndex === images.length - 1;
+  }
+
+  function toggleDropdown() {
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    dropdownMenu.classList.toggle('show');
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.logo')) {
+      const dropdowns = document.getElementsByClassName("dropdown-content");
+      for (let i = 0; i < dropdowns.length; i++) {
+        const openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>
+</body>
+</html>

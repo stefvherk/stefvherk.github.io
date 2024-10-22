@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Ton's Schilderijen</title>
+  <link rel="icon" href="../img/logo.png">
+  <link rel="stylesheet" type="text/css" href="../css/contact.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+<header>
+  <div class="dropdown">
+    <img src="../img/logo.png" alt="Logo" class="logo" onclick="toggleDropdown()">
+    <div class="dropdown-content" id="dropdownMenu">
+      <a href="../html/index.html">HOME</a>
+      <a href="../html/tafels.html">TAFELS</a>
+      <a href="../html/natuur.html">NATUUR</a>
+      <a href="../html/abstract.html">ABSTRACT</a>
+      <a href="../html/divers.html">DIVERS</a>
+      <a href="../html/contact.html">CONTACT</a>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="content">
+    <div class="form-area">
+      <h2>Neem contact met ons op</h2>
+      <form id="contactForm" onsubmit="sendEmail(); return false;">
+        <div class="form-group">
+          <label for="email">Uw E-mailadres:</label>
+          <input type="email" id="email" name="email" placeholder="Vul uw e-mailadres in" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Onderwerp:</label>
+          <input type="text" id="subject" name="subject" placeholder="Vul het onderwerp in" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Bericht:</label>
+          <textarea id="message" name="message" rows="5" placeholder="Typ uw bericht hier..." required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Verstuur Bericht</button>
+      </form>
+
+      <div class="contact-info">
+        <h3>Of neem direct contact op via:</h3>
+        <p>
+          <a href="https://instagram.com/tons.schilderijen" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function sendEmail() {
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+    // Open the default email client with the mailto link
+    window.location.href = `mailto:stefvanherk2007@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message + "\n\n" + "U kunt mij bereiken op: " + email)}`;
+  }
+
+  function toggleDropdown() {
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    dropdownMenu.classList.toggle('show');
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.logo')) {
+      const dropdowns = document.getElementsByClassName("dropdown-content");
+      for (let i = 0; i < dropdowns.length; i++) {
+        const openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>
+</body>
+</html>
